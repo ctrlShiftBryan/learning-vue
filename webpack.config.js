@@ -29,6 +29,11 @@ module.exports = function(env) {
       baseConfig,
       {
         mode: "development",
+        resolve: {
+          alias: {
+            vue$: "vue/dist/vue.esm.js" // Use the full build
+          }
+        },
         devServer: {
           contentBase: PATH.resolve(__dirname, "app"),
           publicPath: "/dist/",
