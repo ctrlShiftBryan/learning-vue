@@ -11,8 +11,31 @@
 
 <body>
 
+
   <div id="app">
-    <input type="number" v-model.number="counter"></input>
+    <section>
+      <h1>🍺 Make yourself some Punk Beers 🍻</h1>
+      <div v-if="beers.length === 0" class="loading">Loading...</div>
+      <div v-for="beer in beers" class="beer-contain">
+        <div class="beer-img">
+          <img :src="beer.img" height="350" />
+        </div>
+        <div class="beer-info">
+          <h2>{{ beer.name }}</h2>
+          <p class="bright">{{ beer.tagline }}</p>
+          <p>
+            <span class="bright">Description:</span> {{ beer.desc }}</p>
+          <p>
+            <span class="bright">Tips:</span> {{ beer.tips }}</p>
+          <h3 class="bright">Food Pairings</h3>
+          <ul>
+            <li v-for="item in beer.food">
+              {{ item }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </div>
 
 
