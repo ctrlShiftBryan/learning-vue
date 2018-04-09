@@ -6,7 +6,9 @@ new Vue({
   el: '#app',
   data() {
     return {
-      tacos: 'I like Al Pastor tacos',
+      num1: 0,
+      num2: 0,
+      name: '',
     };
   },
 });

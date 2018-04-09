@@ -1,84 +1,30 @@
-body,
-html {
-  font-family: 'PT Serif', serif;
+$primary: #5968d7;
+
+.row {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Work Sans', sans-serif;
 }
 
-.special {
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 12px;
-}
-
-h1,
-h2,
-h3,
-li {
-  @extend .special;
-}
-
-li {
-  list-style: none;
-  display: inline-block;
+input,
+span {
+  padding: 10px;
+  font-size: 30px;
+  font-family: 'Work Sans', sans-serif;
 }
 
 input {
-  background: #eee;
+  width: 50px;
 }
 
-button {
-  border: none;
-  border-radius: 1000px;
-  padding: 8px 13px;
-  outline: none;
-  cursor: pointer;
-  &.inc {
-    background: white;
-    color: black;
-  }
-  &.submit {
-    background: black;
-    color: white;
-    @extend .special;
+span {
+  width: 20px;
+}
+
+.second {
+  font-size: 18px;
+  p {
     margin-left: 20px;
-    padding: 12px 14px;
-    width: 240px;
-    transition: 0.25s all ease-in;
-    &:hover {
-      opacity: 0.8;
-      transition: 0.25s all ease-out;
-    }
-  }
-}
-
-.quant-text {
-  display: inline-block;
-  text-align: center;
-  width: 140px;
-  padding: 8px;
-  padding: 8px;
-  @extend .special;
-}
-
-.quantity {
-  border: 2px solid black;
-  width: 235px;
-  padding-left: 3px;
-  border-radius: 1000px;
-  background: #fff;
-  margin-left: 20px;
-}
-
-.item {
-  display: flex;
-  flex-direction: column;
-  width: 280px;
-  height: 400px;
-  justify-content: space-around;
-  background: #eee;
-  padding: 20px 10px;
-  margin: 30px;
-  img {
-    align-self: center;
   }
 }

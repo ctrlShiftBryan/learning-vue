@@ -12,12 +12,19 @@
 <body>
   <div class="container">
     <div id="app">
-      <h3>What is your favorite kind of taco?</h3>
-      <p v-text="tacos"></p>
-      <p>{{ tacos }}</p>
-      <p>
-        <input v-model="tacos" />
-      </p>
+      <div class="row">
+        <!-- v-model will bind to the property of the object returned by the data function -->
+        <!-- the .numer modifier converts the input to an int, without it would be a string -->
+        <input type="number" v-model.number="num1" />
+        <span>+</span>
+        <input type="number" v-model.number="num2" />
+        <span>=</span>
+        <!-- the template has access to the properties of the data() return object like so -->
+        <span>{{ num1 + num2 }}</span>
+      </div>
+      <div class="row second">
+        <p>My favorite kind of taco is Al Pastor</p>
+      </div>
     </div>
 
     <script src="dist/app.bundle.js"></script>
