@@ -11,26 +11,11 @@
 
 <body>
   <div id="app">
-    <h3>Sort titles by:
-      <button @click="sortLowest">Lowest Rated</button>
-      <button @click="sortHighest">Highest Rated</button>
+    <h3>Your Name:
+      <input v-model.lazy="userData" />
     </h3>
-    <table>
-      <thead>
-        <tr>
-          <th v-for="key in columns">
-            {{ key }}
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="entry in ratingsInfo">
-          <td v-for="key in columns">
-            {{entry[key]}}
-          </td>
-        </tr>
-        <tbody>
-    </table>
+    <h2 v-if="userData">Initial entry: {{ userData }}</h2>
+    <h2 v-if="userData">Computed Value: {{ greeting }}</h2>
   </div>
 
   <script src="dist/app.bundle.js"></script>

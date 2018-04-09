@@ -30,4 +30,11 @@
 # 2 Methods, Computed and Watchers
 
 * methods
+
   * Are bound to the Vue instance, they are incredibly useful for functions you would like to access in directives
+
+* computed
+
+  * Computed properties are calculations that will be cached and will only update when needed.
+
+  * Highly performant but use with understanding.
