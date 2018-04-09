@@ -11,21 +11,15 @@
 
 <body>
   <div class="container">
+
     <div id="app">
-      <input type="checkbox" id="john" value="John" v-model="checkedNames">
-      <label for="john"> John</label>
+      <h3>What is your favorite kind of taco??</h3>
+      <textarea v-model="tacos"></textarea>
 
-      <input type="checkbox" id="paul" value="Paul" v-model="checkedNames">
-      <label for="paul"> Paul</label>
-
-      <input type="checkbox" id="george" value="George" v-model="checkedNames">
-      <label for="george"> George</label>
-
-      <input type="checkbox" id="ringo" value="Ringo" v-model="checkedNames">
-      <label for="ringo"> Ringo</label>
       <br>
-      <span>Checked names: {{ checkedNames }}</span>
+      <button type="submit" v-show="tacos">Let us know!</button>
     </div>
+
     <script src="dist/app.bundle.js"></script>
 </body>
 

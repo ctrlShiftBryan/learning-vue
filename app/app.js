@@ -4,7 +4,9 @@ Vue.config.devtools = true;
 
 new Vue({
   el: '#app',
-  data: {
-    checkedNames: [],
+  data() {
+    return {
+      tacos: '',
+    };
   },
 });
