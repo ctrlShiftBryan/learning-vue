@@ -11,29 +11,9 @@
 
 <body>
   <div id="app">
-    <h3>Search a title:
-      <input v-model="filterText" />
-    </h3>
-    <h3>Sort titles by:
-      <button @click="sortLowest">Lowest Rated</button>
-      <button @click="sortHighest">Highest Rated</button>
-    </h3>
-    <table>
-      <thead>
-        <tr>
-          <th v-for="key in columns">
-            {{ key }}
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="entry in filteredFilms">
-          <td v-for="key in columns">
-            {{entry[key]}}
-          </td>
-        </tr>
-        <tbody>
-    </table>
+    <p>counter: {{ counter }}</p>
+    <p>counter computed: {{ countupComp }}</p>
+    <button @click="countup">Increase</button>
   </div>
 
   <script src="dist/app.bundle.js"></script>
