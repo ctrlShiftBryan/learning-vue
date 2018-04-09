@@ -72,3 +72,26 @@ data: {
 
 * Vue cannot detect property addition or deletion so we create this object to keep track
 * this object must be their initially so view can walk it and add getters/setters
+
+* We also have access to the new value and the old value:
+
+```
+watch: {
+  watchedProperty (value, oldValue) {
+    //your dope code here
+  }
+},
+```
+
+* We can also gain access to nested values with 'deep':
+
+```
+watch: {
+  watchedProperty {
+    deep: true,
+    nestedWatchedProperty (value, oldValue) {
+      //your dope code here
+    }
+  }
+},
+```

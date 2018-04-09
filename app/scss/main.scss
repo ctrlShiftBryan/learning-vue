@@ -1,68 +1,61 @@
 body {
-  font-family: 'Archivo Narrow', sans-serif;
-  background: #25859a;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: 'Fjalla One', sans-serif;
-}
-
-h1 {
-  margin-top: 40px;
-  color: white;
-  text-align: center;
-}
-
-.loading {
-  color: white;
-  text-align: center;
-  font-size: 20px;
-}
-
-.display {
-  display: flex;
-  justify-content: center;
-  align-content: center;
+  font-family: 'Mada', sans-serif;
+  background: #222;
 }
 
 #app {
-  @extend .display;
-  flex-direction: column;
+  text-align: center;
+  max-width: 400px;
+  margin: 30px auto;
+  display: table;
 }
 
-.beer-contain {
-  @extend .display;
-  width: 50%;
-  margin: 20px 24%;
-  box-shadow: 0 2px 3px 1px rgba(30, 0, 0, 0.1);
-}
-
-.beer-img {
-  @extend .display;
-  padding: 30px;
-  background: #ff6542;
-  border: 1px solid #88498f;
-  border-right: 1px solid #f44822;
-}
-
-.beer-info {
-  background: #564154;
+span {
   color: white;
-  padding: 30px;
-  border: 1px solid #88498f;
-  .bright {
-    color: #fcd7cf;
-    font-family: 'Contrail One', sans-serif;
+}
+
+svg {
+  width: 400px;
+  text {
+    fill: grey;
+    font-family: 'Mada', sans-serif;
   }
 }
 
-h3 {
-  margin-bottom: 5px;
+line {
+  stroke: #555;
+  stroke-width: 2px;
 }
 
-ul {
-  margin-top: 5px;
+select {
+  font-family: 'Mada', sans-serif;
+  background: #444;
+  color: #ccc;
+  border: 0;
+  width: 200px;
+  margin: 0 0 25px;
+  outline: 0;
+  cursor: pointer;
+  height: 35px;
+  option {
+    font-family: 'Mada', sans-serif;
+  }
+}
+
+.xaxis {
+  transform: translate(20px, 370px);
+}
+
+.yaxis {
+  transform: translate(20px, 0px) rotate(90deg);
+}
+
+$amt: 350px;
+$max: 40;
+$color: 300 / $max;
+
+@for $i from 1 through $max {
+  .bars:nth-child(#{$i}) rect {
+    fill: hsl(($i - 10) * ($color * 1.25), ($i - 1) * $color, 40%);
+  }
 }
