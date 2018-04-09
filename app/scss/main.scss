@@ -1,28 +1,84 @@
-body {
-  font-family: 'Bitter', serif;
+body,
+html {
+  font-family: 'PT Serif', serif;
 }
 
-#app {
-  text-align: center;
-  padding: 70px;
-  max-width: 360px;
-  font-size: 16px;
-  margin: 0 auto;
-  display: table;
-  line-height: 2em;
+.special {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
 }
 
-label {
-  padding-right: 10px;
+h1,
+h2,
+h3,
+li {
+  @extend .special;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+input {
+  background: #eee;
 }
 
 button {
   border: none;
-  color: white;
-  padding: 0.5em 1em;
-  border-radius: 3px;
+  border-radius: 1000px;
+  padding: 8px 13px;
+  outline: none;
+  cursor: pointer;
+  &.inc {
+    background: white;
+    color: black;
+  }
+  &.submit {
+    background: black;
+    color: white;
+    @extend .special;
+    margin-left: 20px;
+    padding: 12px 14px;
+    width: 240px;
+    transition: 0.25s all ease-in;
+    &:hover {
+      opacity: 0.8;
+      transition: 0.25s all ease-out;
+    }
+  }
 }
 
-button.active {
-  background: orangered;
+.quant-text {
+  display: inline-block;
+  text-align: center;
+  width: 140px;
+  padding: 8px;
+  padding: 8px;
+  @extend .special;
+}
+
+.quantity {
+  border: 2px solid black;
+  width: 235px;
+  padding-left: 3px;
+  border-radius: 1000px;
+  background: #fff;
+  margin-left: 20px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: 400px;
+  justify-content: space-around;
+  background: #eee;
+  padding: 20px 10px;
+  margin: 30px;
+  img {
+    align-self: center;
+  }
 }

@@ -8,6 +8,13 @@ DIRECTIVES
 * v-else-if
 * v-for
 * v-on
+  * Extremely useful so there's a shortcut! v-on is great for binding to events like click and mouseenter. You're able to pass in a parameter for the event like (e)
+  * Modifiers
+    * @mousemove.stop is comparable to e.stopPropogation()
+    * @mousemove.prevent this is like e.preventDefault()
+    * @submit.prevent this will no longer reload the page on submission
+    * @click.once not to be confused with v-once, this click event will be triggered once.
+    * @click.native so that you can listen to native events in the DOM
 * v-bind
 * v-model
   * v-model.trim will strip any leading or trailing whitespace from the bound string
