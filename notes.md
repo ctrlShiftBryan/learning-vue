@@ -38,3 +38,15 @@
   * Computed properties are calculations that will be cached and will only update when needed.
 
   * Highly performant but use with understanding.
+
+* computed vs methods
+  * COMPUTED
+    * Runs only when a dependency has changed
+    * Cached
+    * Should be used as a property, in place of data
+    * By default getter only, but you can define a setter
+  * METHODS
+    * Runs whenever an update occurs
+    * Not cached
+    * Typically invoked from v-on/@, but flexible
+    * Getter/setter
