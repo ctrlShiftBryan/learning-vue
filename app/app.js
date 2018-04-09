@@ -66,20 +66,22 @@ new Vue({
     };
   },
   methods: {
-    // no arrow function because we need this
-    submitForm() {
-      this.posts.push({
+    addPost() {
+      let addedPost = new Object({
         author: this.newAuthor,
-        label: this.newLabel.toLowerCase(),
         title: this.newTitle,
+        label: this.newLabel,
       });
+      this.posts.push(addedPost);
+      this.newTitle = '';
+      this.newAuthor = '';
+      this.newLabel = '';
     },
   },
   computed: {
-    filteredPosts() {
-      return this.selected
-        ? this.posts.filter(x => x.label == this.selected.toLowerCase())
-        : this.posts;
+    filteredByLabel() {
+      let filter = new RegExp(this.selected, 'i');
+      return this.posts.filter(el => el.label.match(filter));
     },
   },
 });
