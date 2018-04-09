@@ -23,8 +23,16 @@
         <span>{{ num1 + num2 }}</span>
       </div>
       <div class="row second">
-        <p>My favorite kind of taco is Al Pastor</p>
+        <select v-model="name">
+          <option>Carne Asada</option>
+          <option>Pollo</option>
+          <option>Bean</option>
+          <option>Al Pastor</option>
+        </select>
+        <p v-if="name">My favorite kind of taco is Al Pastor</p>
       </div>
+
+      <pre> {{ $data }}</pre>
     </div>
 
     <script src="dist/app.bundle.js"></script>
