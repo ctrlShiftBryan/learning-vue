@@ -1,47 +1,99 @@
-body,
-button {
-  font-family: 'Bitter', serif;
-}
+$primary: #5968d7;
 
 #app {
-  padding: 30px;
-  max-width: 400px;
-  font-size: 15px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  font-family: 'Work Sans', sans-serif;
 }
 
-table {
-  background: #444;
-  color: white;
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: center;
 }
 
-th {
-  background: #333;
-  text-transform: capitalize;
-  text-align: left;
-}
-
-td,
-th {
-  padding: 10px;
-  border-bottom: 1px solid #888;
-}
-
-td:first-child {
-  width: 300px;
-  border-right: 1px solid #888;
-}
-
-tr:last-child {
-  td {
-    border-bottom: none;
+li {
+  list-style: none;
+  span {
+    display: inline-block;
+    width: 100px;
   }
 }
 
+.contain {
+  width: 400px;
+  padding: 10px 40px;
+}
+
+input,
+select {
+  font-family: 'Work Sans', sans-serif;
+}
+
 button {
-  background: orangered;
+  color: white;
   border: none;
-  padding: 5px 8px;
-  border-radius: 4px;
+  border-radius: 3px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  width: 97.5%;
+  text-align: center;
+  padding: 10px 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   cursor: pointer;
+  transition: 0.25s all ease;
+  background: #222;
+  margin-bottom: 15px;
+  &:hover {
+    transform: translateY(1px);
+  }
+}
+
+select {
+  width: 100%;
+}
+
+.post,
+.new {
+  background: #eee;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 10px 20px;
+  margin: 5px 0 10px;
+  p {
+    font-weight: bold;
+    margin: 10px 0 5px;
+  }
+}
+
+.new {
+  background: #666;
+  border: #222;
+  margin-bottom: 40px;
+  input {
+    margin: 0 0 10px;
+  }
+  select {
+    width: 97.5%;
+    margin-bottom: 10px;
+  }
+  h3 {
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    margin: 10px 0;
+    color: white;
+  }
+}
+
+.label {
+  border: 1px solid black;
+  background: white;
+  color: black;
+  float: right;
+  margin-top: 10px;
+  padding: 5px 10px;
+  border-radius: 3px;
 }
