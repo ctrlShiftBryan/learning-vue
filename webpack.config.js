@@ -14,7 +14,12 @@ const extractSass = new ExtractTextPlugin({
 
 const baseConfig = {
   mode: 'production',
-  entry: ['./app/app.js', './app/scss/main.scss'],
+  entry: [
+    './app/app.js',
+    // './app/scss/main.scss',
+    './app/scss/bootstrap-material-design-4.1.1/scss/bootstrap-material-design.scss',
+  ],
+
   output: {
     path: dist_path,
     filename: 'app.bundle.js',
@@ -28,6 +33,15 @@ const baseConfig = {
           use: [
             {
               loader: 'css-loader',
+            },
+            {
+              loader: 'postcss-loader', // Run post css actions
+              options: {
+                plugins: function() {
+                  // post css plugins, can be exported to postcss.config.js
+                  return [require('precss'), require('autoprefixer')];
+                },
+              },
             },
             {
               loader: 'sass-loader',

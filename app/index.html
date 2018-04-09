@@ -7,46 +7,129 @@
   <title>Learn Vue.js</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="dist/main.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+    crossorigin="anonymous"></script>
+  <script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
 </head>
 
+
 <body>
+  <div class="container">
+    <div class="d-flex justify-content-between bd-highlight mb-1">
+      <div class="d-flex p-2 justify-content-start">
+        <a class="btn">
+          <i class="fas fa-bell"></i>
+          <span class="badge badge-danger">1</span>
+          <br/>
+          <span>alerts</span>
+        </a>
+        <a class="btn">
+          <i class="fas fa-user-md"></i>
+          <br/>
+          <span>verify npi</span>
+        </a>
+      </div>
+      <div class="d-flex p-2">
+        <img src="nav-logo.png" class="img-fluid" style="height: 32px; margin-top: 10px;" />
+      </div>
+      <div class="d-flex p-2">
 
+        <a class="btn">
+          <i class="fas fa-user"></i>
+          <br/>
+          <span>barendt</span>
+        </a>
+        <a class="btn">
+          <i class="fas fa-sign-out-alt"></i>
+          <br/>
+          <span>sign out</span>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button type="button" class="btn btn-raised btn-primary">Enter Key</button>
+        <br>
+        <button type="button" class="btn btn-raised btn-secondary">Start a PA</button>
+      </div>
+      <div class="col-10">
+        <div class="form-group pt-0">
+          <label for="exampleInputEmail1" class="bmd-label-floating">Search</label>
+          <input type="email" class="form-control" id="exampleInputEmail1">
+          <span class="bmd-help">Search by Patient, Key, or Drug</span>
+        </div>
+        <table class="table table-hover table-striped table-bordered" style="margin-top: 3rem">
+          <thead>
+            <tr>
+              <th scope="col">Patient</th>
+              <th scope="col">Drug</th>
+              <th scope="col">Time in Queue</th>
+              <th scope="col">Prescriber</th>
+              <th scope="col">Key</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
 
-  <div id="app">
-    <select v-model="selected">
-      <option v-for="option in options" v-bind:value="option.value">
-        {{ option.text }}
-      </option>
-    </select>
-
-    <svg viewBox="0 0 400 400">
-      <!--xaxis -->
-      <g targetVal="targetVal" class="xaxis">
-        <line x1="0" y1="1" x2="350" y2="1" />
-        <g v-for="(select, index) in targetVal">
-          <line y1="0" y2="7" v-bind="{ 'x1':index*10, 'x2':index*10 }" />
-          <text v-if="index % 5 === 0" v-bind="{ 'x':index*10, 'y':20 }">{{ index }}</text>
-        </g>
-      </g>
-
-      <!--yaxis -->
-      <g class="yaxis">
-        <line x1="0" y1="1" :x2="getMax" y2="1" />
-        <g v-for="n in getMaxRange">
-          <line y1="0" y2="7" v-bind="{ 'x1':n*10, 'x2':n*10 }" />
-          <text v-if="n % 5 === 0" v-bind="{ 'x':getMax-(n*10)-5, 'y':20 }">{{ n }}</text>
-        </g>
-      </g>
-
-      <!-- bars -->
-      <g v-for="(select, index) in targetVal" class="bars">
-        <rect v-bind="{ 'x':index*10+20, 'y':getMax-select*10 }" width="10" :height="select*10" />
-      </g>
-
-    </svg>
+            <tr>
+              <td> Cleveland, G. </td>
+              <td> Eclusa </td>
+              <td> 1 day </td>
+              <td> Scantland, M. </td>
+              <td> BHASVF </td>
+              <td> Status </td>
+            </tr>
+            <tr>
+              <td> Cleveland, G. </td>
+              <td> Eclusa </td>
+              <td> 1 day </td>
+              <td> Scantland, M. </td>
+              <td> BHASVF </td>
+              <td> Status </td>
+            </tr>
+            <tr>
+              <td> Cleveland, G. </td>
+              <td> Eclusa </td>
+              <td> 1 day </td>
+              <td> Scantland, M. </td>
+              <td> BHASVF </td>
+              <td> Status </td>
+            </tr>
+            <tr>
+              <td> Cleveland, G. </td>
+              <td> Eclusa </td>
+              <td> 1 day </td>
+              <td> Scantland, M. </td>
+              <td> BHASVF </td>
+              <td> Status </td>
+            </tr>
+            <tr>
+              <td> Cleveland, G. </td>
+              <td> Eclusa </td>
+              <td> 1 day </td>
+              <td> Scantland, M. </td>
+              <td> BHASVF </td>
+              <td> Status </td>
+            </tr>
+            <tr>
+              <td> Cleveland, G. </td>
+              <td> Eclusa </td>
+              <td> 1 day </td>
+              <td> Scantland, M. </td>
+              <td> BHASVF </td>
+              <td> Status </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
-
-
   <script src="dist/app.bundle.js"></script>
 </body>
 
