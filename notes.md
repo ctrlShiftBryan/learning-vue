@@ -1,6 +1,7 @@
 DIRECTIVES
 
 * v-text
+  * same as mustache templates
 * v-html
   * Great for strings that have html elements that need to be rendered!
 * v-show

@@ -11,10 +11,13 @@
 
 <body>
   <div class="container">
-
     <div id="app">
       <h3>What is your favorite kind of taco?</h3>
-      <p v-html="tacos"></p>
+      <p v-text="tacos"></p>
+      <p>{{ tacos }}</p>
+      <p>
+        <input v-model="tacos" />
+      </p>
     </div>
 
     <script src="dist/app.bundle.js"></script>
