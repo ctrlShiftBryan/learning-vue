@@ -1,30 +1,7 @@
-$primary: #5968d7;
-
-.row {
-  margin: 50px;
-  display: flex;
-  justify-content: center;
-  font-family: 'Work Sans', sans-serif;
-}
-
-input,
-span {
-  padding: 10px;
+#app {
+  width: 100vw;
+  height: 100vh;
+  padding: 15vmin;
   font-size: 30px;
-  font-family: 'Work Sans', sans-serif;
-}
-
-input {
-  width: 50px;
-}
-
-span {
-  width: 20px;
-}
-
-.second {
-  font-size: 18px;
-  p {
-    margin-left: 20px;
-  }
+  transition: 0.2s background-color ease;
 }

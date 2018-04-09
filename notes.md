@@ -1,7 +1,6 @@
-DIRECTIVES
+# 1 DIRECTIVES
 
 * v-text
-  * same as mustache templates
 * v-html
   * Great for strings that have html elements that need to be rendered!
 * v-show
@@ -27,3 +26,8 @@ DIRECTIVES
 * v-once
   * Not quite as useful, v-once will not update once it's been rendered.
 * v-cloak
+
+# 2 Methods, Computed and Watchers
+
+* methods
+  * Are bound to the Vue instance, they are incredibly useful for functions you would like to access in directives

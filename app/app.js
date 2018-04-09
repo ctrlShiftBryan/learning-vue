@@ -6,9 +6,19 @@ new Vue({
   el: '#app',
   data() {
     return {
-      num1: 0,
-      num2: 0,
-      name: '',
+      counter: 0,
+      x: 0,
     };
+  },
+  methods: {
+    increment() {
+      this.counter++;
+    },
+    decrement() {
+      this.counter--;
+    },
+    xCoordinate(e) {
+      this.x = e.clientX;
+    },
   },
 });
