@@ -11,13 +11,21 @@
 
 <body>
   <div class="container">
-    <div id="app" v-bind:style="{ backgroundColor: `hsl(${x}, 80%, 50%)` }" @mousemove="xCoordinate">
-      <p>
-        <button @click="increment">+</button>
-        {{ counter }}
-        <button @click="decrement">-</button>
-      </p>
-      <p>Pixels across: {{ x }}</p>
+    <div id="app">
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/vue-post-photo.jpg" class="main-photo">
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/vue-main-profile.jpg" class="main-profile">
+      <div class="main-info">
+        <span class="name">Julianne Delfina</span>
+        <h3>"It's lovely after it rains"</h3>
+      </div>
+      <hr>
+      <ul>
+        <li v-for="comment in comments">
+          {{ comment }}
+        </li>
+      </ul>
+      <!-- note the enter modifier on keyup so that only when u hit enter -->
+      <input v-model="newComment" v-on:keyup.enter="addComment" placeholder="Add a comment">
     </div>
 
     <script src="dist/app.bundle.js"></script>

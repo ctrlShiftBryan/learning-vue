@@ -4,21 +4,14 @@ Vue.config.devtools = true;
 
 new Vue({
   el: '#app',
-  data() {
-    return {
-      counter: 0,
-      x: 0,
-    };
+  data: {
+    newComment: '',
+    comments: ['Looks great Julianne!', 'I love the sea', 'Where are you at?'],
   },
   methods: {
-    increment() {
-      this.counter++;
-    },
-    decrement() {
-      this.counter--;
-    },
-    xCoordinate(e) {
-      this.x = e.clientX;
+    addComment: function() {
+      this.comments.push(this.newComment);
+      this.newComment = '';
     },
   },
 });
