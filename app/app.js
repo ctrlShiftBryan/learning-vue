@@ -1,10 +1,10 @@
 import Vue from 'vue';
-var app6 = new Vue({
+
+Vue.config.devtools = true;
+
+new Vue({
   el: '#app',
-  data() {
-    return {
-      message: 'This is a good place to type things.',
-      load: false,
-    };
+  data: {
+    checkedNames: [],
   },
 });

@@ -12,17 +12,21 @@
 <body>
   <div class="container">
     <div id="app">
-      <h3>Type here:</h3>
-      <!-- in this example we bind both the textarea v-model and the p content to the message property on the
-      object returned from the Vue data -->
-      <textarea class="message" rows="5" v-model="message" maxlength="72"></textarea>
+      <input type="checkbox" id="john" value="John" v-model="checkedNames">
+      <label for="john"> John</label>
+
+      <input type="checkbox" id="paul" value="Paul" v-model="checkedNames">
+      <label for="paul"> Paul</label>
+
+      <input type="checkbox" id="george" value="George" v-model="checkedNames">
+      <label for="george"> George</label>
+
+      <input type="checkbox" id="ringo" value="Ringo" v-model="checkedNames">
+      <label for="ringo"> Ringo</label>
       <br>
-      <p class="booktext">
-        {{ message }}
-      </p>
+      <span>Checked names: {{ checkedNames }}</span>
     </div>
-  </div>
-  <script src="dist/app.bundle.js"></script>
+    <script src="dist/app.bundle.js"></script>
 </body>
 
 </html>
