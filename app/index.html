@@ -14,10 +14,12 @@
 
     <div id="app">
       <h3>What is your favorite kind of taco?</h3>
-      <textarea v-model="tacos"></textarea>
-
-      <br>
-      <button :class="[tacos ? activeClass : '']">Let us know!</button>
+      <p>
+        <input v-model="tacos" />
+      </p>
+      <p v-once="tacos">{{ tacos }}</p>
+      <span v-pre>This is good if I need to show the mustache view of {{ tacos }}</span>
+      <pre>{{ $data }}</pre>
     </div>
 
     <script src="dist/app.bundle.js"></script>

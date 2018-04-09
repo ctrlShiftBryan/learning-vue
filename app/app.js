@@ -6,8 +6,7 @@ new Vue({
   el: '#app',
   data() {
     return {
-      tacos: '',
-      activeClass: 'active',
+      tacos: 'I like Al Pastor tacos',
     };
   },
 });
