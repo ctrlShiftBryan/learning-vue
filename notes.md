@@ -40,6 +40,7 @@
   * Highly performant but use with understanding.
 
 * computed vs methods
+
   * COMPUTED
     * Runs only when a dependency has changed
     * Cached
@@ -50,3 +51,24 @@
     * Not cached
     * Typically invoked from v-on/@, but flexible
     * Getter/setter
+
+* WATCHERS
+
+  * Vue's Reactivity System
+  * Reactive programming is programming with asynchronous data streams.
+  * A stream is a sequence of ongoing events ordered in time that offer some hooks with which to observe it.
+  * When we use reactive premises for building applications, this means it's very easy to update state in reaction to events.
+  * [Andre Staltz' post](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754)
+
+  * Vue takes the object, walks through its properties and converts them to getter/setters
+
+```
+new Vue({
+data: {
+  text: 'msg'
+}
+})
+```
+
+* Vue cannot detect property addition or deletion so we create this object to keep track
+* this object must be their initially so view can walk it and add getters/setters
