@@ -1,17 +1,33 @@
 import Vue from 'vue';
+const axios = require('axios');
 
 Vue.config.devtools = true;
 
 new Vue({
   el: '#app',
-  data: {
-    newComment: '',
-    comments: ['Looks great Julianne!', 'I love the sea', 'Where are you at?'],
+  data() {
+    return {
+      name: '',
+      email: '',
+      caps: '',
+      response: '',
+      activeClass: 'active',
+    };
   },
   methods: {
-    addComment: function() {
-      this.comments.push(this.newComment);
-      this.newComment = '';
+    submitForm() {
+      axios
+        .post('//jsonplaceholder.typicode.com/posts', {
+          name: this.name,
+          email: this.email,
+          caps: this.caps,
+        })
+        .then(response => {
+          this.response = JSON.stringify(response, null, 2);
+        })
+        .catch(error => {
+          this.response = 'Error: ' + error.response.status;
+        });
     },
   },
 });
