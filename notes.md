@@ -2,6 +2,7 @@ DIRECTIVES
 
 * v-text
 * v-html
+  * Great for strings that have html elements that need to be rendered!
 * v-show
 * v-if
 * v-else
