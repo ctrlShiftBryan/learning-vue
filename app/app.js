@@ -7,6 +7,7 @@ new Vue({
   data() {
     return {
       tacos: '',
+      activeClass: 'active',
     };
   },
 });
