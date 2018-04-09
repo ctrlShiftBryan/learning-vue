@@ -11,30 +11,28 @@
 
 <body>
   <div id="app">
-
-    <form @submit.prevent="submitForm">
-      <div>
-        <label for="name">Name:</label>
-        <br>
-        <input id="name" type="text" v-model="name" required/>
-      </div>
-      <div>
-        <label for="email">Email:</label>
-        <br>
-        <input id="email" type="email" v-model="email" required/>
-      </div>
-      <div>
-        <label for="caps">HOW DO I TURN OFF CAPS LOCK:</label>
-        <br>
-        <textarea id="caps" v-model="caps" required></textarea>
-      </div>
-      <button :class="[name ? activeClass : '']" type="submit">Submit</button>
-      <div>
-        <h3>Response from server:</h3>
-        <pre>{{ response }}</pre>
-      </div>
-    </form>
+    <h3>Sort titles by:
+      <button @click="sortLowest">Lowest Rated</button>
+      <button @click="sortHighest">Highest Rated</button>
+    </h3>
+    <table>
+      <thead>
+        <tr>
+          <th v-for="key in columns">
+            {{ key }}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="entry in ratingsInfo">
+          <td v-for="key in columns">
+            {{entry[key]}}
+          </td>
+        </tr>
+        <tbody>
+    </table>
   </div>
+
   <script src="dist/app.bundle.js"></script>
 </body>
 

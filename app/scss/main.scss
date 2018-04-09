@@ -1,81 +1,47 @@
-body {
-  font-family: 'Playfair Display', serif;
+body,
+button {
+  font-family: 'Bitter', serif;
 }
 
 #app {
-  background: #212222;
-  color: #fff;
-  letter-spacing: 0.04em;
-  text-align: center;
-  margin: 60px;
-  width: 370px;
+  padding: 30px;
+  max-width: 400px;
+  font-size: 15px;
   margin: 0 auto;
-  display: table;
-  padding: 20px;
-  line-height: 1.4em;
 }
 
-.name {
-  color: #ccc;
+table {
+  background: #444;
+  color: white;
 }
 
-small {
-  color: #bbb;
-  font-size: 10px;
-}
-
-h3 {
-  margin: 5px 0 4px;
-}
-
-.main-photo {
-  width: 300px;
-}
-
-.main-profile {
-  float: left;
-  border: 3px solid white;
-  margin: -25px 0 0 20px;
-  position: relative;
-  width: 80px;
-}
-
-.main-info {
-  float: left;
-  padding: 10px 20px;
+th {
+  background: #333;
+  text-transform: capitalize;
   text-align: left;
-  margin-bottom: 15px;
-  &:after {
-    content: '';
-    display: table;
-    clear: both;
+}
+
+td,
+th {
+  padding: 10px;
+  border-bottom: 1px solid #888;
+}
+
+td:first-child {
+  width: 300px;
+  border-right: 1px solid #888;
+}
+
+tr:last-child {
+  td {
+    border-bottom: none;
   }
 }
 
-li {
-  list-style: none outside none;
-  text-align: left;
-  padding: 10px 0;
-  border-bottom: 1px solid #555;
-}
-
-ul {
-  margin: 0;
-  padding: 0 35px;
-}
-
-hr {
-  margin: 25px 0 0 32px;
-  width: 300px;
-
-  border-top: 0;
-  border-bottom: 1px solid #555;
-}
-
-input {
-  font-family: 'Playfair Display', serif;
-  width: 280px;
-  margin: 30px 0;
-  padding: 8px 10px;
-  outline: 0;
+button {
+  background: orangered;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 4px;
+  cursor: pointer;
 }
