@@ -3,29 +3,22 @@ const axios = require('axios');
 import { TweenMax } from 'gsap';
 import _ from 'lodash';
 Vue.config.devtools = true;
-Vue.component('child', {
-  props: {
-    count: {
-      type: Number,
-      required: true,
-    },
+// Each component instance has its own isolated scope
+
+var data = { counter: 0 };
+
+Vue.component('count1', {
+  template: '#count',
+  data() {
+    return data;
   },
-  template: `<div class="num">{{ count }}</div>`,
 });
 
-new Vue({
-  el: '#app',
+Vue.component('count2', {
+  template: '#count',
   data() {
     return {
-      count: 0,
+      counter: 0,
     };
-  },
-  methods: {
-    increment() {
-      this.count++;
-    },
-    decrement() {
-      this.count--;
-    },
   },
 });

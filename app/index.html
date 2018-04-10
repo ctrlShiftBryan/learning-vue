@@ -10,26 +10,27 @@
 </head>
 
 <body>
+
   <div id="app">
-    <h3>
-      <button @click="increment">+</button>
-      Adjust the data
-      <button @click="decrement">-</button>
-    </h3>
-    <h2>This is the app data:
-      <span class="num">{{ count }}</span>
-    </h2>
-    <hr>
-    <h4>
-      <child count="1"></child>
-    </h4>
-    <p>This is a child counter that is using a static integer as props</p>
-    <hr>
-    <h4>
-      <child :count="count"></child>
-    </h4>
-    <p>This is the same child counter and it is using the vue instance data as props</p>
+    <div class="row">
+      <h3>Data as an object</h3>
+      <count1></count1>
+      <count1></count1>
+      <count1></count1>
+    </div>
+
+    <div class="row">
+      <h3>Data as a function</h3>
+      <count2></count2>
+      <count2></count2>
+      <count2></count2>
+    </div>
   </div>
+
+  <script type="text/x-template" id="count">
+  <button @click="counter += 1">{{ counter }}</button>
+</script>
+
 
 
   <script src="dist/app.bundle.js"></script>

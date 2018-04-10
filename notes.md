@@ -146,3 +146,9 @@ text: {
 ```
 
 * Each component instance has its own isolated scope
+
+* camelCasing will be converted
+  `props: ['booleanValue']`
+
+* In HTML it will be kebab-case:
+  `<checkbox :boolean-value="booleanValue"></checkbox>`
