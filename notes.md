@@ -164,3 +164,8 @@ methods: {
   }
 }
 ```
+
+* Slots
+
+  * YOU CAN HAVE DEFAULTS
+  * YOU CAN HAVE MORE THAN ONE

@@ -4,38 +4,35 @@ import { TweenMax } from 'gsap';
 import _ from 'lodash';
 Vue.config.devtools = true;
 
-// data as a function for counter
-// now both app and child have data()
-Vue.component('child', {
-  data() {
-    return {
-      counter: 0,
-    };
-  },
-  props: ['item', 'url'],
-  template: '#child',
-});
-
-new Vue({
+const app = new Vue({
   el: '#app',
   data() {
     return {
-      manifest: [
-        {
-          item: 'backpack',
-          url:
-            'https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/backpack.jpg',
-        },
-        {
-          item: 'tshirt',
-          url: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/tshirt.jpg',
-        },
-        {
-          item: 'sweatshirt',
-          url:
-            'https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/sweatshirt.jpg',
-        },
-      ],
+      selected: 'appBlack',
+      label: 'Label Name',
+      wineFont: 'Montserrat',
+      flourish: 'none',
+      wineImg: 'none',
+      imgOpacity: 0.8,
+      labelPlacement: 0,
+      labelColor: '#000000',
     };
+  },
+  components: {
+    appBlack: {
+      template: '#black',
+    },
+    appWhite: {
+      template: '#white',
+    },
+    appFlor1: {
+      template: '#flor1',
+    },
+    appFlor2: {
+      template: '#flor2',
+    },
+    appFlor3: {
+      template: '#flor3',
+    },
   },
 });
