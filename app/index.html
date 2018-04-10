@@ -25,6 +25,16 @@
     <input v-model="newComment" v-on:keyup.enter="addComment" placeholder="Add a comment">
   </div>
 
+  <!-- This is the Individual Comment Component -->
+  <!-- it is referenced in the .js by id -->
+  <script type="text/x-template" id="comment-template">
+  <li> 
+      <img class="post-img" :src="commentpost.authorImg" /> 
+    <small>{{ commentpost.author }}</small>
+    <p class="post-comment">"{{ commentpost.text }}"</p>
+  </li>
+  </script>
+
 
 
 
