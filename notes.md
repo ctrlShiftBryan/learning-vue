@@ -133,3 +133,16 @@ Vue.component('child', {
   template: `<div>{{ text }}<div>`
 });
 ```
+
+* Objects and arrays need their defaults to be returned from a function:
+
+```
+text: {
+  type: Object,
+  default: function () {
+    return { message: 'hello mr. magoo' }
+  }
+}
+```
+
+* Each component instance has its own isolated scope

@@ -11,7 +11,24 @@
 
 <body>
   <div id="app">
-    <child :text="message"></child>
+    <h3>
+      <button @click="increment">+</button>
+      Adjust the data
+      <button @click="decrement">-</button>
+    </h3>
+    <h2>This is the app data:
+      <span class="num">{{ count }}</span>
+    </h2>
+    <hr>
+    <h4>
+      <child count="1"></child>
+    </h4>
+    <p>This is a child counter that is using a static integer as props</p>
+    <hr>
+    <h4>
+      <child :count="count"></child>
+    </h4>
+    <p>This is the same child counter and it is using the vue instance data as props</p>
   </div>
 
 
