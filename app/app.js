@@ -8,13 +8,28 @@ Vue.component('height-counter', {
   template: '#height-counter',
   data() {
     return {
-      count: 0,
+      count: 3,
     };
   },
   methods: {
     heightincrease: function() {
       this.count += 1;
       this.$emit('heightincrease');
+    },
+  },
+});
+
+Vue.component('radius-counter', {
+  template: '#radius-counter',
+  data() {
+    return {
+      countR: 0,
+    };
+  },
+  methods: {
+    radiusincrease: function() {
+      this.countR += 3;
+      this.$emit('radiusincrease');
     },
   },
 });
@@ -27,7 +42,7 @@ new Vue({
     x1: 15,
     y1: 15,
     g: 0.1,
-    vx: 2,
+    vx: 2.5,
     vy: 0,
     req: undefined,
     running: false,
@@ -35,6 +50,9 @@ new Vue({
   methods: {
     incrementHeight() {
       this.total += 100;
+    },
+    incrementRadius() {
+      this.radius += 1;
     },
     bounceBall() {
       this.vy += this.g; // gravity increases the vertical speed
