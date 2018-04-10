@@ -95,3 +95,10 @@ watch: {
   }
 },
 ```
+
+# 3 Components
+
+* Templates
+
+  * Vue.js uses HTML-based template syntax to bind the Vue instance to the DOM
+  * Templates are optional, you can also write render function with optional JSX support
