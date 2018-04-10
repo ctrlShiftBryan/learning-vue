@@ -3,22 +3,17 @@ const axios = require('axios');
 import { TweenMax } from 'gsap';
 import _ from 'lodash';
 Vue.config.devtools = true;
-// Each component instance has its own isolated scope
 
-var data = { counter: 0 };
-
-Vue.component('count1', {
-  template: '#count',
-  data() {
-    return data;
+new Vue({
+  el: '#app',
+  data: {
+    newComment: '',
+    comments: ['Looks great Julianne!', 'I love the sea', 'Where are you at?'],
   },
-});
-
-Vue.component('count2', {
-  template: '#count',
-  data() {
-    return {
-      counter: 0,
-    };
+  methods: {
+    addComment: function() {
+      this.comments.push(this.newComment);
+      this.newComment = '';
+    },
   },
 });

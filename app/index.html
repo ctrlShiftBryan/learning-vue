@@ -12,24 +12,20 @@
 <body>
 
   <div id="app">
-    <div class="row">
-      <h3>Data as an object</h3>
-      <count1></count1>
-      <count1></count1>
-      <count1></count1>
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/vue-post-photo.jpg" class="main-photo">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/vue-main-profile.jpg" class="main-profile">
+    <div class="main-info">
+      <span class="name">Julianne Delfina</span>
+      <h3>"It's lovely after it rains"</h3>
     </div>
-
-    <div class="row">
-      <h3>Data as a function</h3>
-      <count2></count2>
-      <count2></count2>
-      <count2></count2>
-    </div>
+    <hr>
+    <ul>
+      <li v-for="comment in comments">
+        {{ comment }}
+      </li>
+    </ul>
+    <input v-model="newComment" v-on:keyup.enter="addComment" placeholder="Add a comment">
   </div>
-
-  <script type="text/x-template" id="count">
-  <button @click="counter += 1">{{ counter }}</button>
-</script>
 
 
 
