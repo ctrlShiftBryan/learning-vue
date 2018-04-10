@@ -9,12 +9,12 @@ Vue.component('child', {
   template: '#child',
   methods: {
     talkToMe() {
-      this.text = 'forget introductions, I want a taco';
+      this.$emit('changetext', 'forget introductions, I want a taco');
     },
   },
 });
 
-var vm = new Vue({
+new Vue({
   el: '#app',
   data() {
     return {

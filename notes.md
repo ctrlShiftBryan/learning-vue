@@ -152,3 +152,15 @@ text: {
 
 * In HTML it will be kebab-case:
   `<checkbox :boolean-value="booleanValue"></checkbox>`
+
+* $emit
+
+```
+<my-component @myEvent="parentHandler"></my-component>
+
+methods: {
+  fireEvent() {
+    this.$emit('myEvent', eventValueOne, eventValueTwo);
+  }
+}
+```

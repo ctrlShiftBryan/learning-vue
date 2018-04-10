@@ -12,7 +12,7 @@
 <body>
 
   <div id="app">
-    <child :text="message"></child>
+    <child :text="message" @changetext="message = $event"></child>
   </div>
 
   <script type="text/x-template" id="child">
