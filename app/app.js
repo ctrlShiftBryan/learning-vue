@@ -5,10 +5,11 @@ import _ from 'lodash';
 Vue.config.devtools = true;
 
 Vue.component('child', {
-  props: ['text'],
-  template: `<div>{{ text }}</div>`,
+  props: ['taco'],
+  template: `<div>{{ taco }}</div>`,
 });
-
+// in this example the message is getting
+// passed down into the component
 new Vue({
   el: '#app',
   data() {
