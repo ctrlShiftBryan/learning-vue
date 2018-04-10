@@ -12,22 +12,26 @@
 <body>
 
 
+
   <div id="app">
-    <child :item="item" :counter="counter" :url="url"></child>
+    <div class="unit" v-for="unit in manifest">
+      <child :item="unit.item" :url="unit.url"></child>
+    </div>
   </div>
 
   <script type="text/x-template" id="child">
-    <div class="item">
+ <div class="item">
         <h2>{{ item }}</h2>
-        <img :src="url" width="235" height="300"/>
-        <div class="quantity">
-          <button class="inc" @click="counter > 0 ? counter -= 1 : 0">-</button>
-          <span class="quant-text">Quantity: {{ counter }}</span>
-          <button class="inc" @click="counter += 1">+</button>
-        </div>
-        <button class="submit">Submit</button>
-    </div><!--item-->
-  </script>
+    <img :src="url" width="235" height="300"/>
+    <div class="quantity">
+      <button class="inc" @click="counter > 0 ? counter -= 1 : 0">-</button>
+      <span class="quant-text">Quantity: {{ counter }}</span>
+      <button class="inc" @click="counter += 1">+</button>
+    </div>
+    <button class="submit">Submit</button>
+  </div><!--item-->
+</script>
+
 
 
 
