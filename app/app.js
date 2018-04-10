@@ -5,8 +5,13 @@ import _ from 'lodash';
 Vue.config.devtools = true;
 
 Vue.component('child', {
-  props: ['text'],
-  template: `<div>{{ text }}</div>`,
+  props: {
+    text: {
+      type: Boolean,
+      required: true,
+    },
+  },
+  template: `<div>{{ text }}<div>`,
 });
 
 new Vue({
@@ -14,7 +19,6 @@ new Vue({
   data() {
     return {
       message: 'hello mr. magoo',
-      otherMessage: 'hello too!',
     };
   },
 });

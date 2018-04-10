@@ -112,3 +112,24 @@ watch: {
   * `props:['text']`
 
   * You can think of it a little like the component holds a variable that is waiting to be filled out by whatever the parent sends down to it.
+
+  * TYPES & VALIDATION
+
+```
+ props: {
+   text: [String, Number]
+ }
+```
+
+```
+Vue.component('child', {
+  props: {
+    text: {
+      type: String,
+      required: true,
+      default: 'hello mr. magoo'
+    }
+  },
+  template: `<div>{{ text }}<div>`
+});
+```
