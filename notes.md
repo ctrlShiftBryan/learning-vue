@@ -104,4 +104,11 @@ watch: {
   * Templates are optional, you can also write render function with optional JSX support
 
 * Components
+
   * A collection of elements that are encapsulated into a group that can be accessed through one single element
+
+* Props
+
+  * `props:['text']`
+
+  * You can think of it a little like the component holds a variable that is waiting to be filled out by whatever the parent sends down to it.
