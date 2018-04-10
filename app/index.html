@@ -20,12 +20,11 @@
     </div>
     <hr>
     <ul>
-      <li v-for="comment in comments">
-        {{ comment }}
-      </li>
+      <li is="individual-comment" v-for="comment in comments" v-bind:commentpost="comment"></li>
     </ul>
     <input v-model="newComment" v-on:keyup.enter="addComment" placeholder="Add a comment">
   </div>
+
 
 
 

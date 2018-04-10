@@ -4,6 +4,11 @@ import { TweenMax } from 'gsap';
 import _ from 'lodash';
 Vue.config.devtools = true;
 
+Vue.component('individual-comment', {
+  template: `<li> {{ commentpost }} </li>`,
+  props: ['commentpost'],
+});
+
 new Vue({
   el: '#app',
   data: {
