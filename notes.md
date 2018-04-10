@@ -169,3 +169,4 @@ methods: {
 
   * YOU CAN HAVE DEFAULTS
   * YOU CAN HAVE MORE THAN ONE
+  * slots are another way to pass down html and markup into a component

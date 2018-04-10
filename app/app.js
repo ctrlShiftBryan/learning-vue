@@ -5,8 +5,8 @@ import _ from 'lodash';
 Vue.config.devtools = true;
 
 Vue.component('place', {
-  template: '#place-template',
-  props: ['name', 'img', 'desc'],
+  props: ['img', 'desc'],
+  template: '#place',
 });
 
 new Vue({

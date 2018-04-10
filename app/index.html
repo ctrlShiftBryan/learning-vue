@@ -14,20 +14,23 @@
   <div id="app">
     <h1>Your Upcoming Destinations</h2>
       <div class="location-contain">
-        <div class="locations" v-for="l in locations">
-          <!-- note we have to pass props down with these bindings -->
-          <place :name="l.name" :img="l.img" :desc="l.desc"></place>
+        <div class="locations" v-for="location in locations">
+          <place :img="location.img" :desc="location.desc">
+            <!-- this will get put into the slot -->
+            <h2>{{ location.name }}</h2>
+          </place>
         </div>
       </div>
   </div>
 
-  <script type="text/x-template" id="place-template">
-    <div class="place">
-      <img v-bind:src="img" width="235" height="300" />
-      <h2>{{ name }}</h2>
-      <p>{{ desc }}</p>
-    </div>
-  </script>
+  <script type="text/x-template" id="place">
+       <div class="place">
+          <img :src="img" width="235" height="300"/>
+          <!-- this gets filled out by slot -->
+          <slot></slot>
+          <p>{{ desc }}</p>
+        </div>
+      </script>
 
   <script src="dist/app.bundle.js"></script>
 </body>
