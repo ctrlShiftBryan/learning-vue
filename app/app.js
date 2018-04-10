@@ -5,9 +5,15 @@ import _ from 'lodash';
 Vue.config.devtools = true;
 
 Vue.component('child', {
-  template: `<div>hello mr. magoo</div>`,
+  props: ['text'],
+  template: `<div>{{ text }}</div>`,
 });
 
 new Vue({
   el: '#app',
+  data() {
+    return {
+      message: 'hello mr. magoo',
+    };
+  },
 });
