@@ -11,31 +11,23 @@
 
 <body>
 
+
   <div id="app">
-    <div>
-      <div class="button-group">
-        <button @click="animateBall" v-if="!running">Start</button>
-        <button @click="cancelAnimate" v-else>Reset</button>
-        <height-counter @heightincrease="incrementHeight"></height-counter>
-        <radius-counter @radiusincrease="incrementRadius"></radius-counter>
-      </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" class="bounce">
-        <line x1="600" x2="600" y1="0" :y2="total+radius" stroke="#555" stroke-width="2" stroke-dasharray="5, 5" />
-        <line x1="590" x2="610" y1="1" y2="1" stroke="#555" stroke-width="2" />
-        <line x1="590" x2="610" :y1="total+radius" :y2="total+radius" stroke="#555" stroke-width="2" />
-        <circle :style="{ transform: `translate3d(${x1}px, ${y1}px, 0)` }" :r="radius" :cx="radius" :cy="radius" fill="teal" />
-      </svg>
-    </div>
+    <child :item="item" :counter="counter" :url="url"></child>
   </div>
 
-  <script type="text/x-template" id="height-counter">
-   <button @click="heightincrease">Increase height</button>
+  <script type="text/x-template" id="child">
+    <div class="item">
+        <h2>{{ item }}</h2>
+        <img :src="url" width="235" height="300"/>
+        <div class="quantity">
+          <button class="inc" @click="counter > 0 ? counter -= 1 : 0">-</button>
+          <span class="quant-text">Quantity: {{ counter }}</span>
+          <button class="inc" @click="counter += 1">+</button>
+        </div>
+        <button class="submit">Submit</button>
+    </div><!--item-->
   </script>
-
-  <script type="text/x-template" id="radius-counter">
-   <button @click="radiusincrease">Increase radius</button>
-  </script>
-
 
 
 

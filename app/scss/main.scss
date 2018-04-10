@@ -1,24 +1,90 @@
-body {
-  background: #222;
+body,
+html {
+  font-family: 'PT Serif', serif;
 }
 
-.bounce {
-  width: 100vw;
-  height: 80vh;
+.special {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
 }
 
-.button-group {
-  width: 400px;
-  margin: 20px auto;
-  button {
-    font-family: 'Montserrat', sans-serif;
-    min-width: 80px;
-    border: none;
-    padding: 8px 16px;
-    background: #444;
+h1,
+h2,
+h3,
+li {
+  @extend .special;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 0 0 5px;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+input {
+  background: #eee;
+}
+
+button {
+  border: none;
+  border-radius: 1000px;
+  padding: 8px 13px;
+  outline: none;
+  cursor: pointer;
+  &.inc {
+    background: white;
+    color: black;
+  }
+  &.submit {
+    background: black;
     color: white;
-    border-radius: 3px;
-    outline: 0;
-    cursor: pointer;
+    @extend .special;
+    margin-left: 20px;
+    padding: 12px 14px;
+    width: 240px;
+    transition: 0.25s all ease-in;
+    &:hover {
+      opacity: 0.8;
+      transition: 0.25s all ease-out;
+    }
+  }
+}
+
+.quant-text {
+  display: inline-block;
+  text-align: center;
+  width: 140px;
+  padding: 8px;
+  padding: 8px;
+  @extend .special;
+}
+
+.quantity {
+  border: 2px solid black;
+  width: 235px;
+  padding-left: 3px;
+  border-radius: 1000px;
+  background: #fff;
+  margin-left: 20px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: 440px;
+  justify-content: space-around;
+  background: #eee;
+  padding: 20px 10px;
+  margin: 30px;
+  img {
+    align-self: center;
   }
 }
